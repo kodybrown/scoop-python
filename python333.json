@@ -1,0 +1,22 @@
+{
+	"homepage": "http://www.python.org",
+	"license": "http://docs.python.org/3.3/license.html",
+	"version": "3.3.3",
+	"architecture": {
+		"64bit": {
+			"url": "http://www.python.org/ftp/python/3.3.3/python-3.3.3.amd64.msi",
+			"hash": "md5:8de52d1e2e4bbb3419b7f40bdf48e855"
+		},
+		"32bit": {
+			"url": "http://www.python.org/ftp/python/3.3.3/python-3.3.3.msi",
+			"hash": "md5:ab6a031aeca66507e4c8697ff93a0007"
+		}
+	},
+	"bin": [ "python.exe", "py.exe" ],
+	"env_add_path": [ "scripts" ],
+	"post_install": "pushd $env:temp
+	$s = 'https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py'
+	echo \"running $s...\";(new-object net.webclient).downloadstring($s) | python 2>&1 > $null
+	popd",
+	"notes": "To use PIP to manage Python packages, run 'easy_install pip'"
+}

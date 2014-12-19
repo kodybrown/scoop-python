@@ -1,0 +1,27 @@
+{
+	"homepage": "http://www.python.org",
+	"license": "http://docs.python.org/2/license.html",
+	"version": "2.7.6",
+	"architecture": {
+		"64bit": {
+			"url": "http://www.python.org/ftp/python/2.7.6/python-2.7.6.amd64.msi",
+			"hash": "md5:b73f8753c76924bc7b75afaa6d304645"
+		},
+		"32bit": {
+			"url": "http://www.python.org/ftp/python/2.7.6/python-2.7.6.msi",
+			"hash": "md5:ac54e14f7ba180253b9bae6635d822ea"
+		}
+	},
+	"bin": [
+		"python.exe",
+		"pythonw.exe",
+		[ "python.exe", "python2" ]
+	],
+	"env_add_path": [ "scripts" ],
+	"post_install": "pushd $env:temp
+	$s = 'https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py'
+	echo \"running $s...\";(new-object net.webclient).downloadstring($s) | python 2>&1 > $null
+	popd",
+	"notes": "To use PIP to manage Python packages, run 'easy_install pip'",
+	"checkver": "<p>Latest: <a.*>.*</a> - <a href=\".*\">Python ([0-9\\.]+)</a></p>"
+}
