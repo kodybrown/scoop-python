@@ -14,10 +14,18 @@
 	},
 	"bin": [
 		"python.exe",
+		[ "python.exe", "python2" ],
+		[ "python.exe", "python27" ],
+		[ "python.exe", "python279" ],
 		"pythonw.exe",
-		[ "python.exe", "python2" ]
+		[ "pythonw.exe", "pythonw2" ],
+		[ "pythonw.exe", "pythonw27" ],
+		[ "pythonw.exe", "pythonw279" ],
+		[ "python.exe", "py2" ],
+		[ "python.exe", "py27" ],
+		[ "python.exe", "py279" ]
 	],
-	"env_add_path": [ "scripts" ],
+	"env_add_path": [ "Scripts", "Lib" ],
 	"post_install": "python2 -m ensurepip",
 	"checkver": "<p>Latest: <a.*>.*</a> - <a href=\".*\">Python ([0-9\\.]+)</a></p>"
 }

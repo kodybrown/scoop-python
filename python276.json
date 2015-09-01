@@ -14,10 +14,18 @@
 	},
 	"bin": [
 		"python.exe",
+		[ "python.exe", "python2" ],
+		[ "python.exe", "python27" ],
+		[ "python.exe", "python276" ],
 		"pythonw.exe",
-		[ "python.exe", "python2" ]
+		[ "pythonw.exe", "pythonw2" ],
+		[ "pythonw.exe", "pythonw27" ],
+		[ "pythonw.exe", "pythonw276" ],
+		[ "python.exe", "py2" ],
+		[ "python.exe", "py27" ],
+		[ "python.exe", "py276" ]
 	],
-	"env_add_path": [ "scripts" ],
+	"env_add_path": [ "Scripts", "Lib" ],
 	"post_install": "pushd $env:temp
 	$s = 'https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py'
 	echo \"running $s...\";(new-object net.webclient).downloadstring($s) | python 2>&1 > $null

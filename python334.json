@@ -12,8 +12,21 @@
 			"hash": "md5:839af9c8044a1c45338b618294d7a6f3"
 		}
 	},
-	"bin": [ "python.exe", "py.exe" ],
-	"env_add_path": [ "scripts" ],
+	"bin": [
+		"python.exe",
+		[ "python.exe", "python3" ],
+		[ "python.exe", "python33" ],
+		[ "python.exe", "python334" ],
+		"pythonw.exe",
+		[ "pythonw.exe", "pythonw3" ],
+		[ "pythonw.exe", "pythonw33" ],
+		[ "pythonw.exe", "pythonw334" ],
+		"py.exe",
+		[ "py.exe", "py3" ],
+		[ "py.exe", "py33" ],
+		[ "py.exe", "py334" ]
+	],
+	"env_add_path": [ "Scripts", "Lib" ],
 	"post_install": "pushd $env:temp
 	$s = 'https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py'
 	echo \"running $s...\";(new-object net.webclient).downloadstring($s) | python 2>&1 > $null
