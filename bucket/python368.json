@@ -46,8 +46,8 @@
         ["pythonw.exe", "pythonw36"],
         ["pythonw.exe", "pythonw368"],
         "Lib\\idlelib\\idle.bat",
-        ["Lib\\idlelib\\idle.bat", "idle3"]
-        ["Lib\\idlelib\\idle.bat", "idle36"]
+        ["Lib\\idlelib\\idle.bat", "idle3"],
+        ["Lib\\idlelib\\idle.bat", "idle36"],
         ["Lib\\idlelib\\idle.bat", "idle368"]
     ],
     "env_add_path": [
